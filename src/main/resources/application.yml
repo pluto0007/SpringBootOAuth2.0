@@ -1,0 +1,91 @@
+#security:
+#  oauth2:
+#    client:
+#      clientId: 285912948949655
+#      clientSecret: b97b1d54b31256afb578eaa27b3ba8ba
+#      accessTokenUri: https://graph.facebook.com/oauth/access_token
+#      userAuthorizationUri: https://www.facebook.com/dialog/oauth
+#      tokenName: oauth_token
+#      authenticationScheme: query
+#      clientAuthenticationScheme: form
+#    resource:
+#      userInfoUri: https://graph.facebook.com/me
+#server:
+#  port: 8071
+#spring:
+#  main:
+#    allow-bean-definition-overriding: true
+
+## Above configurations were for @EnableOAuth2Sso
+
+## Below configurations are for @EnableOAuth2Client
+
+facebook:
+  client:
+      clientId: 285912948949655
+      clientSecret: b97b1d54b31256afb578eaa27b3ba8ba
+      accessTokenUri: https://graph.facebook.com/oauth/access_token
+      userAuthorizationUri: https://www.facebook.com/dialog/oauth
+      tokenName: oauth_token
+      authenticationScheme: query
+      clientAuthenticationScheme: form
+  resource:
+    user-info-uri: https://graph.facebook.com/me
+    
+    
+github:
+  client:
+      clientId: 130b97a810a6d7b8593a
+      clientSecret: 7811f18f6e1d2fc0c8581a44c1d981808d4446e8
+      accessTokenUri: https://github.com/login/oauth/access_token
+      userAuthorizationUri: https://github.com/login/oauth/authorize
+      clientAuthenticationScheme: form
+  resource:
+    userInfoUri: https://api.github.com/user 
+#
+#server:
+#  port: 8071
+#
+#spring:
+#  main:
+#    allow-bean-definition-overriding: true
+    
+## Below configurations are used when we have our own authorization server 
+## along with external identity provider like facebook or github or google(which also act like authorisation server)    
+    
+#security:
+#  oauth2:
+#    client:
+#      client-id: acme
+#      client-secret: acmesecret
+#      scope: read,write
+#      auto-approve-scopes: '.*'
+#
+#
+#server:
+#  port: 8071
+#
+#spring:
+#  main:
+#    allow-bean-definition-overriding: true
+
+## Below configurations should be used with error page and @EnableOAuth2Client    
+    
+    
+security:
+  oauth2:
+    client:
+      clientId: 130b97a810a6d7b8593a
+      clientSecret: 7811f18f6e1d2fc0c8581a44c1d981808d4446e8
+      accessTokenUri: https://github.com/login/oauth/access_token
+      userAuthorizationUri: https://github.com/login/oauth/authorize
+      clientAuthenticationScheme: form
+    resource:
+      userInfoUri: https://api.github.com/user 
+
+server:
+  port: 8071
+spring:
+  main:
+    allow-bean-definition-overriding: true
+    
