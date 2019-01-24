@@ -1,0 +1,3 @@
+# SpringBootOAuth2.0
+Login Using Facebook and github
+This guide shows you how to build a sample app doing various things with "social login" using OAuth2 and Spring Boot. It starts with a simple, single-provider single-sign on, and works up to a self-hosted OAuth2 Authorization Server with a choice of authentication providers (Facebook or Github). The samples are all single-page apps using Spring Boot and Spring OAuth on the back end. They also all use plain jQuery on the front end, but the changes needed to convert to a different JavaScript framework or to use server side rendering would be minimal.
